@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taly</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body>
+    <div class="top">
+        <a href="docs.html" class="text docs-btn">docs</a>
+        <a href="changes.html" class="text changes-btn">changes</a>
+        <a href="about.html" class="text about-btn">about</a>
+    </div>
+    <div class="content">
+        <div class="text title">Taly</div>
+        <div class="download-version">
+            <a href="download.html" class="text download-btn">Download</a>
+            <div class="text version">Version 0.1.0</div>
+        </div>
+    </div>
+    <div class="text see-more">🠻 See more 🠻</div>
+    <div class="content-2">
+        <div class="content-2-1">
+            <div class="text learn">Learn</div>
+            <a href="docs.html" class="text learn-btn">docs</a>
+        </div>
+        <div class="content-2-2">
+            <div class="code-block">
+                <div class="code-block-title">hello_world.taly</div>
+                <pre><code>
+<span class="token-keyword">class</span> <span class="token-type">Squirrel</span>
+    <span class="token-keyword">const</span> name<span class="token-punctuation">:</span> <span class="token-type">String</span>
+
+    <span class="token-keyword">pub new</span> <span class="token-function-def">create</span><span class="token-punctuation">(</span>name<span class="token-punctuation">:</span> <span class="token-type">String</span><span class="token-punctuation">) =&gt;</span>
+        <span class="token-keyword">self</span><span class="token-punctuation">.</span>name <span class="token-punctuation">=</span> name
+
+    <span class="token-keyword">pub fn</span> <span class="token-function-def">sayHello</span><span class="token-punctuation">() =&gt;</span>
+        <span class="token-function-call">println</span><span class="token-punctuation">(</span><span class="token-string">"Hey I'm '"</span> <span class="token-operator">+</span> <span class="token-keyword">self</span><span class="token-punctuation">.</span>name <span class="token-operator">+</span> <span class="token-string">"'"</span><span class="token-punctuation">)</span>
+
+<span class="token-keyword">fn</span> <span class="token-function-def">main</span><span class="token-punctuation">() =&gt;</span>
+    <span class="token-keyword">const</span> taly <span class="token-punctuation">=</span> <span class="token-type">Squirrel</span><span class="token-punctuation">.</span><span class="token-function-call">create</span><span class="token-punctuation">(</span><span class="token-string">"Taly"</span><span class="token-punctuation">)</span>
+    taly<span class="token-punctuation">.</span><span class="token-function-call">sayHello</span><span class="token-punctuation">()</span>
+                </code></pre>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

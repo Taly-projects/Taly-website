@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taly - Docs</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body>
+    <div class="top">
+        <a href="index.html" class="text taly-btn">Taly</a>
+        <a href="docs.html" class="text docs-btn selected">docs</a>
+        <a href="changes.html" class="text changes-btn">changes</a>
+        <a href="about.html" class="text about-btn">about</a>
+    </div>
+    <div class="docs-content">
+        <div class="navbar">
+            <a href="#doc-header-1" class="navitem1 text"><div class="text bold">1.</div>&ensp;Getting started</a>
+            <a href="#doc-header-1-1" class="navitem2 text"><div class="text bold">1.1.</div>&ensp;Installation</a>
+            <a href="#doc-header-1-2" class="navitem2 text"><div class="text bold">1.2</div>&ensp;Hello world</a>
+
+            <a href="#doc-header-2" class="navitem1 text"><div class="text bold">2.</div>&ensp;Basics</a>
+            <a href="#doc-header-2-1" class="navitem2 text"><div class="text bold">2.1.</div>&ensp;Comments</a>
+            <a href="#doc-header-2-2" class="navitem2 text"><div class="text bold">2.2.</div>&ensp;Functions</a>
+            <a href="#doc-header-2-2-1" class="navitem3 text"><div class="text bold">2.2.1.</div>&ensp;Early return</a>
+            <a href="#doc-header-2-2-2" class="navitem3 text"><div class="text bold">2.2.2.</div>&ensp;Default parameters</a>
+            <a href="#doc-header-2-2-3" class="navitem3 text"><div class="text bold">2.2.3.</div>&ensp;Parameter ordering</a>
+            <a href="#doc-header-2-3" class="navitem2 text"><div class="text bold">2.3.</div>&ensp;Variables</a>
+            <a href="#doc-header-2-4" class="navitem2 text"><div class="text bold">2.4.</div>&ensp;Data types</a>
+            <a href="#doc-header-2-4-1" class="navitem3 text"><div class="text bold">2.4.1.</div>&ensp;Option</a>
+            <a href="#doc-header-2-4-2" class="navitem3 text"><div class="text bold">2.4.2.</div>&ensp;Array</a>
+            <a href="#doc-header-2-4-3" class="navitem3 text"><div class="text bold">2.4.3.</div>&ensp;Pointer</a>
+            <a href="#doc-header-2-4-4" class="navitem3 text"><div class="text bold">2.4.4.</div>&ensp;Tuple</a>
+            <a href="#doc-header-2-5" class="navitem2 text"><div class="text bold">2.5.</div>&ensp;Type definition</a>
+            <a href="#doc-header-2-6" class="navitem2 text"><div class="text bold">2.6.</div>&ensp;Operators</a>
+            <a href="#doc-header-2-6-1" class="navitem3 text"><div class="text bold">2.6.1.</div>&ensp;Algebraic</a>
+            <a href="#doc-header-2-6-2" class="navitem3 text"><div class="text bold">2.6.2.</div>&ensp;Boolean</a>
+            <a href="#doc-header-2-6-3" class="navitem3 text"><div class="text bold">2.6.3.</div>&ensp;Comparison</a>
+            <a href="#doc-header-2-6-4" class="navitem3 text"><div class="text bold">2.6.4.</div>&ensp;Type comparison</a>
+            <a href="#doc-header-2-6-5" class="navitem3 text"><div class="text bold">2.6.5.</div>&ensp;Precedence</a>
+            <a href="#doc-header-2-6-6" class="navitem3 text"><div class="text bold">2.6.6.</div>&ensp;Short assignment</a>
+            <a href="#doc-header-2-7" class="navitem2 text"><div class="text bold">2.7.</div>&ensp;If statement</a>
+            <a href="#doc-header-2-7-1" class="navitem3 text"><div class="text bold">2.7.1.</div>&ensp;Return out of if</a>
+            <a href="#doc-header-2-8" class="navitem2 text"><div class="text bold">2.8.</div>&ensp;While loop</a>
+            <a href="#doc-header-2-8-1" class="navitem3 text"><div class="text bold">2.8.1.</div>&ensp;Break</a>
+            <a href="#doc-header-2-8-2" class="navitem3 text"><div class="text bold">2.8.2.</div>&ensp;Continue</a>
+            <a href="#doc-header-2-8-3" class="navitem3 text"><div class="text bold">2.8.3.</div>&ensp;Labels</a>
+            <a href="#doc-header-2-9" class="navitem2 text"><div class="text bold">2.9.</div>&ensp;Match statement</a>
+            
+            <a href="#doc-header-3" class="navitem1 text"><div class="text bold">3.</div>&ensp;Data manipulation</a>
+            <a href="#doc-header-3-1" class="navitem2 text"><div class="text bold">3.1.</div>&ensp;Classes</a>
+            <a href="#doc-header-3-1-1" class="navitem3 text"><div class="text bold">3.1.1.</div>&ensp;Access Modifiers</a>
+            <a href="#doc-header-3-1-2" class="navitem3 text"><div class="text bold">3.1.2.</div>&ensp;Constructors</a>
+            <a href="#doc-header-3-1-3" class="navitem3 text"><div class="text bold">3.1.3.</div>&ensp;Destructors</a>
+            <a href="#doc-header-3-2" class="navitem2 text"><div class="text bold">3.2.</div>&ensp;Interfaces</a>
+            <a href="#doc-header-3-3" class="navitem2 text"><div class="text bold">3.3.</div>&ensp;Prototypes</a>
+            <a href="#doc-header-3-4" class="navitem2 text"><div class="text bold">3.4.</div>&ensp;Inheritance</a>
+            <a href="#doc-header-3-5" class="navitem2 text"><div class="text bold">3.5.</div>&ensp;Generics</a>
+            <a href="#doc-header-3-5-1" class="navitem3 text"><div class="text bold">3.5.1.</div>&ensp;Constraints</a>
+            <a href="#doc-header-3-5-2" class="navitem3 text"><div class="text bold">3.5.2.</div>&ensp;Optional implementation</a>
+            <a href="#doc-header-3-6" class="navitem2 text"><div class="text bold">3.6.</div>&ensp;Spaces</a>
+            <a href="#doc-header-3-7" class="navitem2 text"><div class="text bold">3.7.</div>&ensp;Enumerations</a>
+            <a href="#doc-header-3-8" class="navitem2 text"><div class="text bold">3.8.</div>&ensp;Use</a>
+            <a href="#doc-header-3-8-1" class="navitem3 text"><div class="text bold">3.8.1.</div>&ensp;Selection</a>
+            <a href="#doc-header-3-8-2" class="navitem3 text"><div class="text bold">3.8.2.</div>&ensp;Renaming</a>
+            <a href="#doc-header-3-9" class="navitem2 text"><div class="text bold">3.9.</div>&ensp;Casting</a>
+            <a href="#doc-header-3-10" class="navitem2 text"><div class="text bold">3.10.</div>&ensp;Lambda</a>
+
+            <a href="#doc-header-4" class="navitem1 text"><div class="text bold">4.</div>&ensp;Advanced concepts</a>
+            <a href="#doc-header-4-1" class="navitem2 text"><div class="text bold">4.1.</div>&ensp;Referencing</a>
+            <a href="#doc-header-4-2" class="navitem2 text"><div class="text bold">4.2.</div>&ensp;Options</a>
+            <a href="#doc-header-4-3" class="navitem2 text"><div class="text bold">4.3.</div>&ensp;Arrays</a>
+            <a href="#doc-header-4-3-1" class="navitem3 text"><div class="text bold">4.3.1.</div>&ensp;Foreach loop</a>
+            <a href="#doc-header-4-4" class="navitem2 text"><div class="text bold">4.4.</div>&ensp;Errors</a>
+            <a href="#doc-header-4-4-1" class="navitem3 text"><div class="text bold">4.4.1.</div>&ensp;Definition</a>
+            <a href="#doc-header-4-4-2" class="navitem3 text"><div class="text bold">4.4.2.</div>&ensp;Try catch</a>
+            <a href="#doc-header-4-5" class="navitem2 text"><div class="text bold">4.5.</div>&ensp;Extension</a>
+            <a href="#doc-header-4-5-1" class="navitem3 text"><div class="text bold">4.5.1.</div>&ensp;Sealed class</a>
+            <a href="#doc-header-4-6" class="navitem2 text"><div class="text bold">4.6.</div>&ensp;Operator Overloading</a>
+            <a href="#doc-header-4-7" class="navitem2 text"><div class="text bold">4.7.</div>&ensp;Implicit Casting</a>
+            <a href="#doc-header-4-8" class="navitem2 text"><div class="text bold">4.8.</div>&ensp;Any</a>
+            <a href="#doc-header-4-9" class="navitem2 text"><div class="text bold">4.9.</div>&ensp;Function Scope</a>
+
+            <a href="#doc-header-5" class="navitem1 text"><div class="text bold">5.</div>&ensp;Foreign Function Access</a>
+            <a href="#doc-header-5-1" class="navitem2 text"><div class="text bold">5.1.</div>&ensp;Standard C</a>
+            <a href="#doc-header-5-2" class="navitem2 text"><div class="text bold">5.2.</div>&ensp;External Library</a>
+            <a href="#doc-header-5-3" class="navitem2 text"><div class="text bold">5.3.</div>&ensp;Using pointers</a>
+
+            <a href="#doc-header-6" class="navitem1 text"><div class="text bold">6.</div>&ensp;Idioms</a>
+            <a href="#doc-header-6-1" class="navitem2 text"><div class="text bold">6.1.</div>&ensp;Naming convention</a>
+            <a href="#doc-header-6-2" class="navitem2 text"><div class="text bold">6.2.</div>&ensp;Project structure</a>
+            <a href="#doc-header-6-2-1" class="navitem3 text"><div class="text bold">6.2.1.</div>&ensp;Configuration file</a>
+        </div>
+        <div class="documentation">
+            <h1 id="doc-header-1">1. Getting started</h1>
+            <h2 id="doc-header-1-1">1.1. Installation</h2>
+            <p>
+                Work in progress!
+            </p>
+
+            <h2 id="doc-header-1-2">1.2. Hello world</h2>
+            <div class="code-block">
+                <div class="code-block-title">hello_world.taly</div>
+                <pre><code>
+<span class="token-keyword">fn</span> <span class="token-function-def">main</span><span class="token-punctuation">() =&gt;</span> <span class="token-function-call">println</span><span class="token-punctuation">(</span><span class="token-string">"Hello, world!"</span><span class="token-punctuation">)</span>
+                </code></pre>
+            </div>
+            <p>
+                The main <span class="code-inline token-function-def">main</span> is the start of the program.
+                Here we are calling the <span class="code-inline token-function-call">println</span> function (from the std library which is included by default), with the string <span class="code-inline token-string">"Hello, world"</span>.
+            </p>
+
+
+
+            <h1 id="doc-header-2">2. Basics</h1>
+            <h2 id="doc-header-2-1">2.1. Comments</h2>
+            <div class="code-block">
+                <div class="code-block-title">comments.taly</div>
+                <pre><code>
+<span class="token-comment"># This is a comment!</span>
+                </code></pre>
+            </div>
+            <p>
+                In Taly, comments starts with a <span class="code-inline">#</span> symbol. There is no multi-line comment.
+            </p>
+            
+            <h2 id="doc-header-2-2">2.2. Function</h2>
+
+            <p>
+                Here is the generic syntax to define a function:
+            </p>
+            <div class="code-block">
+                <div class="code-block-title">function_syntax.taly</div>
+                <pre><code>
+<span class="token-keyword">fn</span> <span class="token-function-def">name</span><span class="token-punctuation">(</span>arg0<span class="token-punctuation">:</span> <span class="token-type">Type0</span><span class="token-punctuation">,</span> arg1<span class="token-punctuation">:</span> <span class="token-type">Type1</span><span class="token-punctuation">, ...):</span> <span class="token-type">ReturnType</span> <span class="token-punctuation">=&gt;</span> <span class="token-comment"># body</span></span></span></span>
+                </code></pre>
+            </div>
+
+            <p>
+                Let's now look at an example:
+            </p>
+            <div class="code-block">
+                <div class="code-block-title">function_example1.taly</div>
+                <pre><code>
+<span class="token-keyword">fn</span> <span class="token-function-def">add</span><span class="token-punctuation">(</span>lhs<span class="token-punctuation">:</span> <span class="token-type">I32</span><span class="token-punctuation">,</span> rhs<span class="token-punctuation">:</span> <span class="token-type">I32</span><span class="token-punctuation">):</span> <span class="token-type">I32</span> <span class="token-punctuation">=&gt;</span> lhs <span class="token-operator">+</span> rhs</span></span></span>
+                </code></pre>
+            </div>
+            <p>
+                This <span class="code-inline token-function-def">add</span> function takes two parameter: an <span class="code-inline token-type">I32</span> named <span class="code-inline">lhs</span> and another <span class="code-inline token-type">I32</span> named <span class="code-inline">rhs</span>, it returns an <span class="code-inline token-type">I32</span>. Essentially this function computes the sum of two <span class="code-inline token-type">I32</span>.
+            </p>
+
+            <p>
+                Let's now look at a more complicated example, the factorial function:
+            </p>
+            <div class="code-block">
+                <div class="code-block-title">factorial.taly</div>
+                <pre><code>
+<span class="token-keyword">fn</span> <span class="token-function-def">factorial</span><span class="token-punctuation">(</span>n<span class="token-punctuation">:</span> <span class="token-type">U8</span><span class="token-punctuation">):</span> <span class="token-type">U64</span> <span class="token-punctuation">=&gt;</span>
+    <span class="token-keyword">if</span> n <span class="token-operator">&lt;=</span> <span class="token-number">1</span> <span class="token-keyword">then</span> <span class="token-number">1</span>
+    <span class="token-keyword">else</span> <span class="token-function-call">factorial</span><span class="token-punctuation">(</span>n <span class="token-operator">-</span> <span class="token-number">1</span><span class="token-punctuation">)</span> <span class="token-keyword">end</span>
+                </code></pre>
+            </div>
+            <p>
+                You can see in this function the use of an if statement, we will discuss that in <a class="internal-link" href="#doc-header-2-7">Section 2.7</a>.
+            </p>
+
+            <h3 id="doc-header-2-2-1">2.2.1. Early return</h3>
+            <p>
+                The <span class="code-inline token-keyword">return</span> keyword can be used to return earlier out of a function. We could rewrite the factorial function like this:
+            </p>
+            <div class="code-block">
+                <div class="code-block-title">factorial_early_return.taly</div>
+                <pre><code>
+<span class="token-keyword">fn</span> <span class="token-function-def">factorial</span><span class="token-punctuation">(</span>n<span class="token-punctuation">:</span> <span class="token-type">U8</span><span class="token-punctuation">):</span> <span class="token-type">U64</span> <span class="token-punctuation">=&gt;</span>
+    <span class="token-keyword">if</span> n <span class="token-operator">&lt;=</span> <span class="token-number">1</span> <span class="token-keyword">then</span>
+        <span class="token-keyword">return</span> <span class="token-number">1</span>
+    <span class="token-keyword">end</span> 
+    <span class="token-function-call">factorial</span><span class="token-punctuation">(</span>n <span class="token-operator">-</span> <span class="token-number">1</span><span class="token-punctuation">)</span>
+                </code></pre>
+            </div>
+            
+
+            <h3 id="doc-header-2-2-2">2.2.2. Default parameters</h3>
+            <p>
+                It is also possible to define parameters with default value.
+            </p>
+            <div class="code-block">
+                <div class="code-block-title">default_parameter.taly</div>
+                <pre><code>
+<span class="token-keyword">fn</span> <span class="token-function-def">factorial</span><span class="token-punctuation">(</span>n<span class="token-punctuation">:</span> <span class="token-type">U8</span> <span class="token-punctuation">=</span> <span class="token-number">1</span><span class="token-punctuation">):</span> <span class="token-type">U64</span> <span class="token-punctuation">=&gt;</span> <span class="token-comment"># body</span>
+                </code></pre>
+            </div>
+
+            <p>
+                This would allow us to call the <span class="code-inline token-function-definition">factorial</span> function without giving it an argument. In this case the default value will be used.
+            </p>
+            <div class="code-block">
+                <div class="code-block-title">default_parameter_call1.taly</div>
+                <pre><code>
+<span class="token-function-call">factorial</span><span class="token-punctuation">()</span>
+                </code></pre>
+            </div>
+            <p>
+                That is the same as this:
+            </p>
+            <div class="code-block">
+                <div class="code-block-title">default_parameter_call2.taly</div>
+                <pre><code>
+<span class="token-function-call">factorial</span><span class="token-punctuation">(</span><span class="token-number">1</span><span class="token-punctuation">)</span>
+                </code></pre>
+            </div>
+
+            <p>
+                <span class="warning">Be careful:</span> Default parameters must be defined last!
+            </p>
+
+            <h3 id="doc-header-2-2-3">2.2.3. Parameter ordering</h3>
+            <p>
+                It is possible to pass parameters in a different order than the one defined:
+            </p>
+            <div class="code-block">
+                <div class="code-block-title">parameter_ordering.taly</div>
+                <pre><code>
+<span class="token-keyword">fn</span> <span class="token-function-def">subI32</span><span class="token-punctuation">(</span>lhs<span class="token-punctuation">:</span> <span class="token-type">I32</span><span class="token-punctuation">,</span> rhs<span class="token-punctuation">:</span> <span class="token-type">I32</span><span class="token-punctuation">):</span> <span class="token-type">I32</span> <span class="token-punctuation">=&gt;</span> lhs <span class="token-operator">-</span> rhs
+
+<span class="token-function-call">subI32</span><span class="token-punctuation">(</span><span class="token-number">1</span><span class="token-punctuation">,</span> <span class="token-number">2</span><span class="token-punctuation">)</span> <span class="token-comment"># 1 - 2 = -1</span>
+<span class="token-function-call">subI32</span><span class="token-punctuation">(</span>rhs<span class="token-punctuation">:</span> <span class="token-number">1</span><span class="token-punctuation">,</span> </span>lhs<span class="token-punctuation">:</span> <span class="token-number">2</span><span class="token-punctuation">)</span> <span class="token-comment"># 2 - 1 = 1</span>
+<span class="token-function-call">subI32</span><span class="token-punctuation">(</span>rhs<span class="token-punctuation">:</span> <span class="token-number">1</span><span class="token-punctuation">,</span> <span class="token-number">2</span><span class="token-punctuation">)</span> <span class="token-comment"># The last parameter can be inferred</span>
+                </code></pre>
+            </div>
+            
+            <h2 id="doc-header-2-3">2.3. Variables</h2>
+            <p>
+                There are two ways of storing data:<br>
+                &emsp;- the first one is storing in into a constant.<br>
+                &emsp;- the second one is storing in into a variable.<br>
+                Constants are immutable, that means that their values cannot be changed.
+            </p>
+            <div class="code-block">
+                <div class="code-block-title">parameter_ordering.taly</div>
+                <pre><code>
+<span class="token-keyword">const</span> PI<span class="token-punctuation">:</span> <span class="token-type">F32</span> <span class="token-punctuation">=</span> <span class="token-number">3.1415</span>
+<span class="token-keyword">var</span> x <span class="token-punctuation">=</span> PI <span class="token-punctuation">+</span> <span class="token-number">2</span>
+                </code></pre>
+            </div>
+            <p>
+                You can also see for the second variables no types have been specified, this is because the compiler is smart enough to determine which type it should be.
+            </p>
+            
+            <h2 id="doc-header-2-4">2.4. Data types</h2>
+            <table>
+                <thead class="align-left">
+                    <tr>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody class="align-left">
+                    <tr>
+                        <td>I8</td>
+                        <td>Signed 8-bit integer</td>
+                    </tr>
+                    <tr>
+                        <td>I16</td>
+                        <td>Signed 16-bit integer</td>
+                    </tr>
+                    <tr>
+                        <td>I32</td>
+                        <td>Signed 32-bit integer</td>
+                    </tr>
+                    <tr>
+                        <td>I64</td>
+                        <td>Signed 64-bit integer</td>
+                    </tr>
+                    <tr>
+                        <td>ISize</td>
+                        <td>Signed arch integer</td>
+                    </tr>
+                    <tr>
+                        <td>U8</td>
+                        <td>Unsigned 8-bit integer</td>
+                    </tr>
+                    <tr>
+                        <td>U16</td>
+                        <td>Unsigned 16-bit integer</td>
+                    </tr>
+                    <tr>
+                        <td>U32</td>
+                        <td>Unsigned 32-bit integer</td>
+                    </tr>
+                    <tr>
+                        <td>U64</td>
+                        <td>Unsigned 64-bit integer</td>
+                    </tr>
+                    <tr>
+                        <td>USize</td>
+                        <td>Unsigned arch integer</td>
+                    </tr>
+                    <tr>
+                        <td>Bool</td>
+                        <td>Boolean (<span class="code-inline token-boolean">true</span> or <span class="code-inline token-number">false</span>)</td>
+                    </tr>
+                    <tr>
+                        <td>Char</td>
+                        <td>Character (e.g. <span class="code-inline token-string">'a'</span>)</td>
+                    </tr>
+                    <tr>
+                        <td>String</td>
+                        <td>Boolean (e.g. <span class="code-inline token-string">"Hello"</span>)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 id="doc-header-2-4-1">2.4.1. Option</h3>
+            <div class="code-block">
+                <div class="code-block-title">options.taly</div>
+                <pre><code>
+<span class="token-keyword">var</span> my_opt<span class="token-punctuation">:</span> <span class="token-type">Option</span><span class="token-punctuation">[</span><span class="token-type">I8</span><span class="token-punctuation">]</span> <span class="token-punctuation">=</span> None
+my_opt <span class="token-punctuation">=</span> <span class="token-number">2</span>
+                </code></pre>
+            </div>
+            <p>
+                Options can either be <span class="code-inline">None</span> or contains a value (in this case an <span class="code-inline token-type">I8</span>). This allows you to have variables with no value, but we will discuss more about those later.
+            </p>
+
+            <h3 id="doc-header-2-4-2">2.4.2. Array</h3>
+            <div class="code-block">
+                <div class="code-block-title">options.taly</div>
+                <pre><code>
+<span class="token-keyword">const</span> my_array<span class="token-punctuation">:</span> <span class="token-type">Array</span><span class="token-punctuation">[</span><span class="token-type">I8</span><span class="token-punctuation">]</span> <span class="token-punctuation">=</span> <span class="token-punctuation">[</span><span class="token-number">0</span><span class="token-punctuation">,</span> <span class="token-number">1</span><span class="token-punctuation">,</span> <span class="token-number">2</span><span class="token-punctuation">]</span>
+                </code></pre>
+            </div>
+            <p>
+                Arrays are a datatype that can contains multiple data of the same type, however they cannot be extended nor shrank.
+            </p>
+
+            <h3 id="doc-header-2-4-3">2.4.3. Pointer</h3>
+            <div class="code-block">
+                <div class="code-block-title">options.taly</div>
+                <pre><code>
+<span class="token-keyword">var</span> x<span class="token-punctuation">:</span> <span class="token-type">I32</span> <span class="token-punctuation">=</span> </span><span class="token-number">10</span>
+<span class="token-keyword">const</span> x_ptr<span class="token-punctuation">:</span> <span class="token-type">Pointer</span><span class="token-punctuation">[</span><span class="token-type">I32</span><span class="token-punctuation">]</span> <span class="token-punctuation">=</span> x<span class="token-punctuation">.</span><span class="token-function-call">pointer</span><span class="token-punctuation">()</span>
+                </code></pre>
+            </div>
+            <p>
+                Pointers are mainly used to communicate with a library in c. The <span class="code-inline token-function-call">pointer</span> function is defined for every type (even custom type).
+            </p>
+
+            <h3 id="doc-header-2-4-4">2.4.4. Tuple</h3>
+
+            <h2 id="doc-header-2-5">2.5. Type definition</h2>
+
+            <h2 id="doc-header-2-6">2.6. Operators</h2>
+
+            <h3 id="doc-header-2-6-1">2.6.1. Algebraic</h3>
+
+            <h3 id="doc-header-2-6-2">2.6.2. Boolean</h3>
+
+            <h3 id="doc-header-2-6-3">2.6.3. Comparison</h3>
+
+            <h3 id="doc-header-2-6-4">2.6.4. Type comparison</h3>
+
+            <h3 id="doc-header-2-6-5">2.6.5. Precedence</h3>
+
+            <h3 id="doc-header-2-6-6">2.6.6. Short assignment</h3>
+
+            <h2 id="doc-header-2-7">2.7. If statement</h2>
+
+            <h3 id="doc-header-2-7-1">2.7.1. Return out of if</h3>
+
+            <h2 id="doc-header-2-8">2.8. While loop</h2>
+
+            <h3 id="doc-header-2-8-1">2.8.1. Break</h3>
+
+            <h3 id="doc-header-2-8-2">2.8.2. Continue</h3>
+
+            <h3 id="doc-header-2-8-3">2.8.3. Labels</h3>
+
+            <h2 id="doc-header-2-9">2.9. Match statement</h2>
+
+
+
+            <h1 id="doc-header-3">3. Data manipulation</h1>
+
+            <h2 id="doc-header-3-1">3.1. Classes</h2>
+
+            <h3 id="doc-header-3-1-1">3.1.1. Access Modifiers</h3>
+
+            <h3 id="doc-header-3-1-2">3.1.2. Constructors</h3>
+
+            <h3 id="doc-header-3-1-3">3.1.3. Destructors</h3>
+
+            <h2 id="doc-header-3-2">3.2. Interfaces</h2>
+
+            <h2 id="doc-header-3-3">3.3. Prototypes</h2>
+
+            <h2 id="doc-header-3-4">3.4. Inheritance</h2>
+
+            <h2 id="doc-header-3-5">3.5. Generics</h2>
+
+            <h3 id="doc-header-3-5-1">3.5.1. Constraints</h3>
+
+            <h3 id="doc-header-3-5-2">3.5.2. Optional implementation</h3>
+
+            <h2 id="doc-header-3-6">3.6. Spaces</h2>
+
+            <h2 id="doc-header-3-7">3.7. Enumerations</h2>
+
+            <h2 id="doc-header-3-8">3.8. Use</h2>
+
+            <h3 id="doc-header-3-8-1">3.8.1. Selection</h3>
+
+            <h3 id="doc-header-3-8-2">3.8.2. Renaming</h3>
+
+            <h2 id="doc-header-3-9">3.9. Casting</h2>
+
+            <h2 id="doc-header-3-10">3.10. Lambda</h2>
+
+
+
+            <h1 id="doc-header-4">4. Advanced concepts</h1>
+
+            <h2 id="doc-header-4-1">4.1. Referencing</h2>
+
+            <h2 id="doc-header-4-2">4.2. Options</h2>
+
+            <h2 id="doc-header-4-3">4.3. Arrays</h2>
+
+            <h3 id="doc-header-4-3-1">4.3.1. Foreach loop</h3>
+
+            <h2 id="doc-header-4-4">4.4. Errors</h2>
+
+            <h3 id="doc-header-4-4-1">4.4.1. Definition</h3>
+
+            <h3 id="doc-header-4-4-2">4.4.2. Try catch</h3>
+
+            <h2 id="doc-header-4-5">4.5. Extension</h2>
+
+            <h3 id="doc-header-4-5-1">4.5.1. Sealed class</h3>
+
+            <h2 id="doc-header-4-6">4.6. Operator overloading</h2>
+
+            <h2 id="doc-header-4-7">4.7. Implicit casting</h2>
+
+            <h2 id="doc-header-4-8">4.8. Any</h2>
+
+            <h2 id="doc-header-4-9">4.9. Function scope</h2>
+
+
+
+            <h1 id="doc-header-5">5. Foreign Function Access</h1>
+
+            <h2 id="doc-header-5-1">5.1. Standard C</h2>
+
+            <h2 id="doc-header-5-2">5.2. External library</h2>
+
+            <h2 id="doc-header-5-3">5.3. Using pointers</h2>
+
+
+
+            <h1 id="doc-header-6">6. Idioms</h1>
+
+            <h2 id="doc-header-6-1">6.1. Naming convention</h2>
+
+            <h2 id="doc-header-6-2">6.2. Project structure</h2>
+
+            <h3 id="doc-header-6-2-1">6.2.1. Configuration file</h3>
+
+
+            
+        </div>
+    </div>
+</body>
+</html>

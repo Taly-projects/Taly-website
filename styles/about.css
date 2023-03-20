@@ -1,0 +1,39 @@
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.content .introduction {
+    margin-top: 20px;
+    width: 60%;
+}
+
+.content .introduction p {
+    font-family: 'Poppins';
+    color: var(--accent2);
+    text-align: center;
+}
+
+.content .github {
+    margin-top: 20px;
+}
+
+.content .github .github-title {
+    font-family: 'Poppins';
+    text-decoration: none;
+    font-size: clamp(64px, 10 * min(1vh, 1vw), 128px);
+    color: var(--accent2);
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.content .github .github-title i {
+    font-size: calc(0.7 * clamp(64px, 10 * min(1vh, 1vw), 128px));
+}
+
+.content .github .github-title:hover {
+    color: var(--accent1);
+    transition: 0.3s ease;
+}

@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css');
+
+* {
+    --root-bg: #EEEEEE;
+    --accent1: #F4AC45;
+    --accent2: #161616;
+    --accent3: #8ACB88;
+    --accent4: #CBC5EA;
+    --accent5: #FFA6C9;
+    --accent6: #BEBFC5;
+
+    margin: 0;
+    padding: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+    *{
+        --root-bg: #161616;
+        --accent1: #F4AC45;
+        --accent2: #EEEEEE;
+        --accent3: #8ACB88;
+        --accent4: #CBC5EA;
+        --accent5: #FFA6C9;
+        --accent6: #BEBFC5;
+    }
+}
+
+html {
+    scrollbar-color: var(--accent1) var(--accent2);
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--root-bg);
+}
+
+.text {
+    user-select: none;
+    font-family: 'Poppins';
+}
+
+.bold {
+    font-weight: 500;
+}
+
+.bold2 {
+    font-weight: 600;
+}
+
+.accent {
+    color: var(--accent1);
+}
+
+.accent2 {
+    color: var(--accent2);
+}
+
+.accent3 {
+    color: var(--accent3);
+}
+
+.accent4 {
+    color: var(--accent4);
+}
+
+.accent5 {
+    color: var(--accent5);
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.top {
+    position: sticky;
+    top: 0;
+    background-color: var(--root-bg);
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    margin-right: 10px;
+    padding-bottom: 5px;
+    padding-top: 10px;
+    height: clamp(30px, 4vh, 44px);
+}
+
+.taly-btn {
+    position: absolute;
+    left: 10px;
+    padding: 0px 5px 0px 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--accent2);
+    font-size: clamp(18px, 3vh, 22px);
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.taly-btn:hover {
+    background-color: var(--accent1);
+}
+
+.about-btn {
+    margin-right: 15px;
+    padding: 0px 5px 0px 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--accent2);
+    font-size: clamp(18px, 3vh, 22px);
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.about-btn:hover {
+    background-color: var(--accent1);
+}
+
+.about-btn.selected {
+    color: var(--accent1);
+}
+
+.about-btn.selected:hover {
+    background-color: transparent;
+}
+
+.changes-btn {
+    margin-right: 15px;
+    padding: 0px 5px 0px 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--accent2);
+    font-size: clamp(18px, 3vh, 22px);
+    font-weight: 500;
+}
+
+.changes-btn:hover {
+    background-color: var(--accent1);
+}
+
+.changes-btn.selected {
+    color: var(--accent1);
+}
+
+.changes-btn.selected:hover {
+    background-color: transparent;
+}
+
+.docs-btn {
+    margin-right: 15px;
+    padding: 0px 5px 0px 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--accent2);
+    font-size: clamp(18px, 3vh, 22px);
+    font-weight: 500;
+}
+
+.docs-btn:hover {
+    background-color: var(--accent1);
+}
+
+.docs-btn.selected {
+    color: var(--accent1);
+}
+
+.docs-btn.selected:hover {
+    background-color: transparent;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    height: calc(100vh - clamp(30px, 5vh, 56px) - 10px);
+    align-items: center;
+}
+
+.content .title {
+    font-size: clamp(64px, 25 * min(1vh, 1vw), 256px);
+    font-weight: 700;
+    color: var(--accent1);
+}
+
+.content .download-version {
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.content .download-version .download-btn {
+    background-color: var(--accent1);
+    color: var(--accent2);
+    text-align: center;
+    padding: 0px 10px 0px 10px;
+    font-size: 32px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    border: 3px var(--accent1) solid;
+    transition: 0.5s ease;
+}
+
+.content .download-version .download-btn:hover {
+    border: 3px var(--accent2) solid;
+    transition: 0.5s ease;
+}
+
+.content .download-version .version {
+    color: var(--accent2);
+    text-align: center;
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.see-more {
+    position: absolute;
+    bottom: 5px;
+    width: 20%;
+    left: 40%;
+    text-align: center;
+    color: var(--accent6);
+    transition: 0.2s ease;
+}
+
+.see-more:hover {
+    color: var(--accent2);
+}
+
+.content-2 {
+    height: 100vh;
+}
+
+.content-2-1 {
+    display: flex;
+    justify-content: center;
+    height: 40vh;
+    align-items: center;
+}
+
+.content-2-1 .learn {
+    font-size: clamp(64px, 15 * min(1vh, 1vw), 196px);
+    font-weight: 700;
+    color: var(--accent1);
+}
+
+.content-2-1 .learn-btn {
+    margin-left: 30px;
+    background-color: var(--accent1);
+    color: var(--accent2);
+    text-align: center;
+    padding: 0px 10px 0px 10px;
+    min-width: 150px;
+    font-size: 32px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    border: 3px var(--accent1) solid;
+    transition: 0.5s ease;
+}
+
+.content-2-1 .learn-btn:hover {
+    border: 3px var(--accent2) solid;
+    transition: 0.5s ease;
+}
+
+.content-2-2 {
+    display: flex;
+    justify-content: center;
+    height: 60vh;
+    align-items: center;
+}
+
+.content-2-2 .code-block {
+    font-family: monospace;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 50%;
+    min-width: fit-content;
+}
+
+.content-2-2 .code-block pre {
+    background-color: var(--code-block-bg);
+    border-radius: 0px 10px 10px 10px;
+}
+
+.content-2-2 .code-block .code-block-title {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    width: fit-content;
+    font-weight: 600;
+    text-align: left;
+    background-color: #F4AC4599;
+    color: var(--accent2);
+    border-radius: 5px 5px 0px 0px;
+}
+
+.content-2-2 .code-block pre code {
+    font-size: clamp(12px, min(3vw, 3vh), 22px);
+    padding-left: 10px;
+    padding-right: 10px;
+    display: block;
+    text-align: left;
+    color: var(--code-text);
+    height: 100%;
+}
