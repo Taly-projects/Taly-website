@@ -225,3 +225,32 @@
     border: 1px solid var(--table-border);
     padding: 2px 20px 2px 5px;
 }
+
+@media only screen and (max-width: 600px) {
+    .docs-content {
+        display: flex;
+        flex-wrap: wrap;
+        height: fit-content;
+        min-height: calc(100vh - clamp(30px, 5vh, 56px) - 10px);
+        overflow-y: scroll;
+    }
+
+    .docs-content .navbar {
+        width: 100%;
+        border-right: none;
+        height: fit-content;
+        overflow-y: hidden;
+        margin-left: 0;
+        padding-left: 10px;
+        border-bottom: 2px solid #FFFFFF10;
+    }
+
+    .docs-content .documentation {
+        margin-left: 10px;
+        color: var(--accent2);
+        width: 100%;
+        padding-right: 15px;
+        height: fit-content;
+        overflow-y: hidden;
+    }
+}

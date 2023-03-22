@@ -229,8 +229,8 @@ body {
 .see-more {
     position: absolute;
     bottom: 5px;
-    width: 20%;
-    left: 40%;
+    width: 100%;
+    left: 0;
     text-align: center;
     color: var(--accent6);
     transition: 0.2s ease;
@@ -318,4 +318,42 @@ body {
     text-align: left;
     color: var(--code-text);
     height: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        height: calc(100vh - clamp(30px, 5vh, 56px) - 10px);
+        align-items: center;
+    }
+
+    .content .title {
+        width: 100%;
+        text-align: center;
+    }
+
+    .content .download-version {
+        margin-left: 0;
+    }
+
+    .content-2-1 {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        height: 40vh;
+        align-items: center;
+    }
+
+    .content-2-1 .learn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .content-2-1 .learn-btn {
+        margin-left: 0;
+    }
 }
