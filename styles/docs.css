@@ -146,12 +146,12 @@
 }
 
 .documentation .code-block pre code {
-    white-space: pre-wrap;
     padding-left: 10px;
     display: block;
     text-align: left;
     color: var(--code-text);
     height: 100%;
+    white-space: pre-wrap !important;
 }
 
 .code-inline {

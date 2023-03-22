@@ -311,6 +311,7 @@ body {
 }
 
 .content-2-2 .code-block pre code {
+    white-space: pre-wrap;
     font-size: clamp(12px, min(3vw, 3vh), 22px);
     padding-left: 10px;
     padding-right: 10px;
