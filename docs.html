@@ -338,7 +338,7 @@ my_opt <span class="token-punctuation">=</span> <span class="token-number">2</sp
 
             <h3 id="doc-header-2-4-3">2.4.3. Pointer</h3>
             <div class="code-block">
-                <div class="code-block-title">options.taly</div>
+                <div class="code-block-title">pointers.taly</div>
                 <pre><code>
 <span class="token-keyword">var</span> x<span class="token-punctuation">:</span> <span class="token-type">I32</span> <span class="token-punctuation">=</span> </span><span class="token-number">10</span>
 <span class="token-keyword">const</span> x_ptr<span class="token-punctuation">:</span> <span class="token-type">Pointer</span><span class="token-punctuation">[</span><span class="token-type">I32</span><span class="token-punctuation">]</span> <span class="token-punctuation">=</span> x<span class="token-punctuation">.</span><span class="token-function-call">pointer</span><span class="token-punctuation">()</span>
@@ -349,32 +349,271 @@ my_opt <span class="token-punctuation">=</span> <span class="token-number">2</sp
             </p>
 
             <h3 id="doc-header-2-4-4">2.4.4. Tuple</h3>
+            <div class="code-block">
+                <div class="code-block-title">tuples.taly</div>
+                <pre><code>
+<span class="token-keyword">var</span> my_tuple<span class="token-punctuation">: (</span><span class="token-type">String</span><span class="token-punctuation">,</span> <span class="token-type">I32</span><span class="token-punctuation">) =</span> <span class="token-punctuation">(</span><span class="token-string">"Hello"</span><span class="token-punctuation">,</span> <span class="token-number">10</span><span class="token-punctuation">)</span>
+<span class="token-keyword">var</span> long_tuple<span class="token-punctuation">: (</span><span class="token-type">F32</span><span class="token-punctuation">,</span> </span><span class="token-type">String</span><span class="token-punctuation">,</span> <span class="token-type">I32</span><span class="token-punctuation">) =</span> <span class="token-punctuation">(</span><span class="token-number">9.3</span><span class="token-punctuation">,</span> <span class="token-string">"Hello"</span><span class="token-punctuation">,</span> <span class="token-number">10</span><span class="token-punctuation">)</span>
+                </code></pre>
+            </div>
+            <p>
+                Tuples are datatypes that can contains multiple data of different types.
+            </p>
 
             <h2 id="doc-header-2-5">2.5. Type definition</h2>
+            <div class="code-block">
+                <div class="code-block-title">type_def.taly</div>
+                <pre><code>
+<span class="token-keyword">type</span> <span class="token-type">StringI32</span> <span class="token-punctuation">=</span> <span class="token-punctuation">(</span><span class="token-type">String</span><span class="token-punctuation">,</span> <span class="token-type">I32</span><span class="token-punctuation">)</span>
+
+<span class="token-keyword">fn</span> <span class="token-function-def">main</span><span class="token-punctuation">() =&gt;</span>
+    <span class="token-keyword">const</span> foo<span class="token-punctuation">:</span> <span class="token-type">StringI32</span> <span class="token-punctuation">=</span> <span class="token-punctuation">(</span><span class="token-string">"hello"</span><span class="token-punctuation">,</span> <span class="token-number">16</span><span class="token-punctuation">)</span>
+                </code></pre>
+            </div>
 
             <h2 id="doc-header-2-6">2.6. Operators</h2>
 
             <h3 id="doc-header-2-6-1">2.6.1. Algebraic</h3>
+            <table>
+                <thead class="align-left">
+                    <th>Operator</th>
+                    <th>description</th>
+                </thead>
+                <tbody class="align-left">
+                    <tr>
+                        <td>+</td>
+                        <td>Addition</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>Subtraction</td>
+                    </tr>
+                    <tr>
+                        <td>*</td>
+                        <td>Multiplication</td>
+                    </tr>
+                    <tr>
+                        <td>/</td>
+                        <td>Division</td>
+                    </tr>
+                    <tr>
+                        <td>%</td>
+                        <td>Remainder</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>
+                <br>
+                Here is an example on how to use them:
+            </p>
+            <div class="code-block">
+                <div class="code-block-title">algebraic.taly</div>
+                <pre><code>
+<span class="token-keyword">const</span> a <span class="token-punctuation">=</span> <span class="token-number">3</span> <span class="token-operator">+</span> <span class="token-number">4</span>
+<span class="token-keyword">const</span> b <span class="token-punctuation">=</span> <span class="token-number">12</span> <span class="token-operator">-</span> <span class="token-number">4</span>
+<span class="token-keyword">const</span> c <span class="token-punctuation">=</span> <span class="token-number">6</span> <span class="token-operator">*</span> <span class="token-number">2</span>
+<span class="token-keyword">const</span> d <span class="token-punctuation">=</span> <span class="token-number">6</span> <span class="token-operator">/</span> <span class="token-number">2</span>
+<span class="token-keyword">const</span> e <span class="token-punctuation">=</span> <span class="token-number">7</span> <span class="token-operator">%</span> <span class="token-number">2</span>
+                </code></pre>
+            </div>
 
             <h3 id="doc-header-2-6-2">2.6.2. Boolean</h3>
+            <table>
+                <thead class="align-left">
+                    <th>Operator</th>
+                    <th>description</th>
+                </thead>
+                <tbody class="align-left">
+                    <tr>
+                        <td>and</td>
+                        <td>Boolean AND</td>
+                    </tr>
+                    <tr>
+                        <td>or</td>
+                        <td>Boolean OR</td>
+                    </tr>
+                    <tr>
+                        <td>xor</td>
+                        <td>Boolean XOR</td>
+                    </tr>
+                    <tr>
+                        <td>not</td>
+                        <td>Boolean Not (Unary)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>
+                <br>
+                Here is an example on how to use them:
+            </p>
+            <div class="code-block">
+                <div class="code-block-title">algebraic.taly</div>
+                <pre><code>
+<span class="token-keyword">const</span> a <span class="token-punctuation">=</span> <span class="token-boolean">true</span> <span class="token-keyword">and</span> <span class="token-boolean">false</span>
+<span class="token-keyword">const</span> b <span class="token-punctuation">=</span> <span class="token-boolean">true</span> <span class="token-keyword">or</span> <span class="token-boolean">false</span>
+<span class="token-keyword">const</span> c <span class="token-punctuation">=</span> <span class="token-boolean">true</span> <span class="token-keyword">xor</span> <span class="token-boolean">false</span>
+<span class="token-keyword">const</span> d <span class="token-punctuation">=</span> <span class="token-keyword">not</span> <span class="token-boolean">true</span>
+                </code></pre>
+            </div>
 
             <h3 id="doc-header-2-6-3">2.6.3. Comparison</h3>
+            <table>
+                <thead class="align-left">
+                    <th>Operator</th>
+                    <th>description</th>
+                </thead>
+                <tbody class="align-left">
+                    <tr>
+                        <td>==</td>
+                        <td>Is equal to</td>
+                    </tr>
+                    <tr>
+                        <td>!=</td>
+                        <td>Is not equal to</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;</td>
+                        <td>Is less than</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;=</td>
+                        <td>Is less or equal than</td>
+                    </tr>
+                    <tr>
+                        <td>&gt;</td>
+                        <td>Is greater than</td>
+                    </tr>
+                    <tr>
+                        <td>&gt;=</td>
+                        <td>Is greater or equal than</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>
+                <br>
+                Here is an example on how to use them:
+            </p>
+            <div class="code-block">
+                <div class="code-block-title">algebraic.taly</div>
+                <pre><code>
+<span class="token-keyword">const</span> a <span class="token-punctuation">=</span> <span class="token-number">5</span> <span class="token-operator">==</span> <span class="token-number">5</span>
+<span class="token-keyword">const</span> b <span class="token-punctuation">=</span> <span class="token-number">3</span> <span class="token-operator">!=</span> <span class="token-number">4</span>
+<span class="token-keyword">const</span> c <span class="token-punctuation">=</span> <span class="token-number">9</span> <span class="token-operator">&lt;</span> <span class="token-number">12</span>
+<span class="token-keyword">const</span> c <span class="token-punctuation">=</span> <span class="token-number">2</span> <span class="token-operator">&lt;=</span> <span class="token-number">3</span>
+<span class="token-keyword">const</span> c <span class="token-punctuation">=</span> <span class="token-number">8</span> <span class="token-operator">&gt;</span> <span class="token-number">7</span>
+<span class="token-keyword">const</span> c <span class="token-punctuation">=</span> <span class="token-number">1</span> <span class="token-operator">&gt;=</span> <span class="token-number">1</span>
+                </code></pre>
+            </div>
 
             <h3 id="doc-header-2-6-4">2.6.4. Type comparison</h3>
+            <table>
+                <thead class="align-left">
+                    <th>Operator</th>
+                    <th>description</th>
+                </thead>
+                <tbody class="align-left">
+                    <tr>
+                        <td>is</td>
+                        <td>Type is</td>
+                    </tr>
+                    <tr>
+                        <td>isnt</td>
+                        <td>Type is not</td>
+                    </tr>
+                    <tr>
+                        <td>extends</td>
+                        <td>Type extends</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>
+                <br>
+                Here is an example on how to use them:
+            </p>
+            <div class="code-block">
+                <div class="code-block-title">algebraic.taly</div>
+                <pre><code>
+<span class="token-keyword">const</span> a<span class="token-punctuation">:</span> <span class="token-type">I32</span> <span class="token-punctuation">=</span> <span class="token-number">13</span>
+<span class="token-keyword">const</span> b <span class="token-punctuation">=</span> a <span class="token-keyword">is</span> <span class="token-type">I32</span>
+<span class="token-keyword">const</span> c <span class="token-punctuation">=</span> a <span class="token-keyword">isnt</span> <span class="token-type">I64</span>
+<span class="token-keyword">const</span> d <span class="token-punctuation">=</span> a <span class="token-keyword">extends</span> <span class="token-type">IAdd</span>
+                </code></pre>
+            </div>
 
             <h3 id="doc-header-2-6-5">2.6.5. Precedence</h3>
 
             <h3 id="doc-header-2-6-6">2.6.6. Short assignment</h3>
 
             <h2 id="doc-header-2-7">2.7. If statement</h2>
+            <div class="code-block">
+                <div class="code-block-title">if.taly</div>
+                <pre><code>
+<span class="token-keyword">if</span> condition <span class="token-keyword">then</span>
+    <span class="token-comment"># body</span>
+<span class="token-keyword">elif</span> condition <span class="token-keyword">then</span>
+    <span class="token-comment"># body</span>
+<span class="token-keyword">else</span>
+    <span class="token-comment"># body</span>
+<span class="token-keyword">end</span>
+                </code></pre>
+            </div>
+            <p>If statements can have has many <span class="code-inline token-keyword">elif</span> branch as you need but only one <span class="code-inline token-keyword">else</span> branch.</p>
 
             <h3 id="doc-header-2-7-1">2.7.1. Return out of if</h3>
 
             <h2 id="doc-header-2-8">2.8. While loop</h2>
+            <div class="code-block">
+                <div class="code-block-title">while.taly</div>
+                <pre><code>
+<span class="token-keyword">while</span> condition <span class="token-keyword">do</span>
+    <span class="token-comment"># body</span>
+<span class="token-keyword">end</span>
+                </code></pre>
+            </div>
 
             <h3 id="doc-header-2-8-1">2.8.1. Break</h3>
+            <p>
+                Break statement allow you to exit a loop.
+            </p>
+            <div class="code-block">
+                <div class="code-block-title">while.taly</div>
+                <pre><code>
+<span class="token-keyword">var</span> i<span class="token-punctuation">:</span> <span class="token-type">I32</span> <span class="token-punctuation">=</span> <span class="token-number">0</span>
+<span class="token-keyword">while</span> i <span class="token-operator">&lt;</span> <span class="token-number">10</span> <span class="token-keyword">do</span>
+    <span class="token-keyword">if</span> i <span class="token-operator">==</span> <span class="token-number">8</span> <span class="token-keyword">then</span> <span class="token-keyword">break</span> <span class="token-keyword">end</span>
+    i <span class="token-operator">+=</span> <span class="token-number">1</span>
+<span class="token-keyword">end</span>
+                </code></pre>
+            </div>
+            <p>
+                In this case the loop will stop once i reaches 8.
+            </p>
 
             <h3 id="doc-header-2-8-2">2.8.2. Continue</h3>
+            <p>
+                Break statement allow you go to the next iteration (skipping the current one).
+            </p>
+            <div class="code-block">
+                <div class="code-block-title">while.taly</div>
+                <pre><code>
+<span class="token-keyword">var</span> i<span class="token-punctuation">:</span> <span class="token-type">I32</span> <span class="token-punctuation">=</span> <span class="token-number">0</span>
+<span class="token-keyword">while</span> i <span class="token-operator">&lt;</span> <span class="token-number">10</span> <span class="token-keyword">do</span>
+    <span class="token-keyword">if</span> i <span class="token-operator">==</span> <span class="token-number">8</span> <span class="token-keyword">then</span>
+        i <span class="token-operator">+=</span> <span class="token-number">1</span> 
+        <span class="token-keyword">continue</span> 
+    <span class="token-keyword">end</span>
+    <span class="token-comment"># body</span>
+    i <span class="token-operator">+=</span> <span class="token-number">1</span>
+<span class="token-keyword">end</span>
+                </code></pre>
+            </div>
+            <p>
+                In this case the loop will skip the iteration when i reaches 8.
+            </p>
 
             <h3 id="doc-header-2-8-3">2.8.3. Labels</h3>
 
